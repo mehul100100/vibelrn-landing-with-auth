@@ -91,14 +91,9 @@ const Index = () => {
                 />
 
                 <span className="relative">Search</span>
-                {/* <ArrowRight className="w-5 h-5 relative" /> */}
                 <img
                   src="/right_icon.svg"
                   alt="right-icon"
-                  // style={{
-                  //   filter:
-                  //     "drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.15))",
-                  // }}
                 />
               </button>
             </div>
