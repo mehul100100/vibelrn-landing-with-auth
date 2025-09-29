@@ -16,9 +16,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <main className="container mx-auto px-6 pt-32 pb-20">
+      <main className="container mx-auto px-6 mt-18 pb-20 pt-10 bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)] w-full rounded-[24px]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Heading with underline */}
           <div className="space-y-4">
@@ -26,25 +26,19 @@ const Index = () => {
               Master AI Tools In{" "}
               <span className="relative inline-block font-bold">
                 Minutes
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="12"
-                  viewBox="0 0 300 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M2 10C50 5 100 2 150 2C200 2 250 5 298 10"
-                    stroke="var(--primary)"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                <img
+                  src="/underline.34eea7c8.svg"
+                  alt=""
+                  className="absolute -bottom-5 left-0 w-full h-5"
+                  style={{
+                    filter:
+                      "drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.15))",
+                  }}
+                />
               </span>
             </h1>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-10">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br />
               Suspendisse varius enim in eros elementum tristique.
@@ -53,7 +47,8 @@ const Index = () => {
 
           {/* Tools Count */}
           <p className="text-sm font-medium text-foreground">
-            999 + AI Tools & Learning Series with top Tutors
+            <span className="font-bold">999 + AI Tools</span> & Learning Series
+            with top Tutors
           </p>
 
           {/* Search Bar */}
