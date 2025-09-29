@@ -67,7 +67,6 @@ const Index = () => {
               />
 
               {/* Search Button */}
-
               <button
                 className="cursor-pointer relative flex items-center gap-2 px-4 md:px-6 py-3 rounded-full font-medium text-white shadow-md text-sm md:text-base overflow-hidden border border-gray-300 bg-gradient-to-br from-[#62BEBA] to-[#3F7E7F]"
                 style={{
@@ -75,7 +74,6 @@ const Index = () => {
                     "0 0 8px rgba(98, 190, 186, 0.6), 0 0 4px rgba(63, 126, 127, 0.4)",
                 }}
               >
-                {/* Dot pattern overlay with left-to-right opacity fade */}
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
@@ -91,25 +89,36 @@ const Index = () => {
                 />
 
                 <span className="relative">Search</span>
-                <img
-                  src="/right_icon.svg"
-                  alt="right-icon"
-                />
+                <img src="/right_icon.svg" alt="right-icon" />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Tool Cards Grid */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {tools.map((tool) => (
-            <ToolCard
-              key={tool.name}
-              name={tool.name}
-              bgColor={tool.bgColor}
-              logoColor={tool.logoColor}
-            />
-          ))}
+        {/* Tool Cards Marquee */}
+        <div className="mt-24 relative overflow-hidden">
+          <div className="flex animate-marquee gap-6">
+            {/* First set of cards */}
+            {tools.map((tool, index) => (
+              <div key={`tool-1-${index}`} className="flex-shrink-0 w-80">
+                <ToolCard
+                  name={tool.name}
+                  bgColor={tool.bgColor}
+                  logoColor={tool.logoColor}
+                />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {tools.map((tool, index) => (
+              <div key={`tool-2-${index}`} className="flex-shrink-0 w-80">
+                <ToolCard
+                  name={tool.name}
+                  bgColor={tool.bgColor}
+                  logoColor={tool.logoColor}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
