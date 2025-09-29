@@ -35,8 +35,7 @@ const Navbar = () => {
               >
                 {item.label}
                 {item.active && (
-                 <span className="absolute -bottom-1 left-1/2 w-1/4 h-0.5 bg-[var(--dark-accent)] transform -translate-x-1/2" />
-
+                  <span className="absolute -bottom-1 left-1/2 w-1/4 h-0.5 bg-[var(--dark-accent)] transform -translate-x-1/2" />
                 )}
               </a>
             ))}
@@ -47,10 +46,10 @@ const Navbar = () => {
             <Button
               variant="mentorOutline"
               size="default"
-              className="hidden sm:flex"
+              className="hidden rounded-full sm:flex"
             >
               Become Mentor
-              <ArrowRight className="w-4 h-4 ml-1" />
+              <img src="/right_icon_dark.svg" className="" alt="right-icon" />
             </Button>
             <Button variant="dark" size="default" className="rounded-full px-6">
               Signup
