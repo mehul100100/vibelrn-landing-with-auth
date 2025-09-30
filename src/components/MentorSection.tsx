@@ -14,7 +14,7 @@ const MentorSection = () => {
           <div className="flex justify-center mb-8">
             <div className="inline-flex items-center sm:px-15 px-5 py-3 bg-transparent rounded-full border border-gray-200">
               <span className="text-sm text-gray-700 font-medium">
-              Learn from people who’ve done it
+              Learn from people who have done it
               </span>
             </div>
           </div>
@@ -28,7 +28,7 @@ const MentorSection = () => {
 
           {/* Description */}
           <p className="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-          Stuck or just getting started? Talk to someone who's already figured it out.
+          Stuck or just getting started? Talk to someone who is already figured it out.
             <br className="hidden md:block" />
             Book a session, get real answers, skip the guessing.
           </p>
