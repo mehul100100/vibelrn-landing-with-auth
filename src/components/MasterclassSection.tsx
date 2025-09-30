@@ -2,6 +2,7 @@
 "use client";
 import { useState } from "react";
 import { Pen, Star, Zap, Target, Flag } from "lucide-react";
+import { motion } from "framer-motion";
 
 const MasterclassSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
@@ -43,39 +44,119 @@ const MasterclassSection = () => {
     setExpandedIndex(expandedIndex === index ? -1 : index);
   };
 
+  // Container variants for staggered children
+  const containerVariants: any = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  // Fade up animation
+  const fadeUpVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  // Feature items stagger animation
+  const featureContainerVariants: any = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const featureItemVariants: any = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  // Image animation
+  const imageVariants: any = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+        delay: 0.3,
+      },
+    },
+  };
+
   return (
     <div className="w-full py-20 bg-background">
       <div className="container mx-auto px-6">
-        {/* Badge */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-white rounded-full shadow-sm border border-gray-200">
-            <span className="text-sm text-gray-700 font-medium">
-              Lorem ipsum dolor sit
-            </span>
-          </div>
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
+          {/* Badge */}
+          <motion.div className="flex justify-center mb-8" variants={fadeUpVariants}>
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full shadow-sm border border-gray-200">
+              <span className="text-sm text-gray-700 font-medium">
+                Lorem ipsum dolor sit
+              </span>
+            </div>
+          </motion.div>
 
-        {/* Main Heading */}
-        <div className="text-center mb-6">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-            Masterclass for the AI-Curious
-          </h2>
-        </div>
+          {/* Main Heading */}
+          <motion.div className="text-center mb-6" variants={fadeUpVariants}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              Masterclass for the AI-Curious
+            </h2>
+          </motion.div>
 
-        {/* Subheading */}
-        <p className="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-16 leading-relaxed">
-          Jump into practical, no-fluff AI lessons made for freelancers, small
-          <br className="hidden md:block" />
-          business owners, and creative minds no coding, just results.
-        </p>
+          {/* Subheading */}
+          <motion.p
+            className="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-16 leading-relaxed"
+            variants={fadeUpVariants}
+          >
+            Jump into practical, no-fluff AI lessons made for freelancers, small
+            <br className="hidden md:block" />
+            business owners, and creative minds no coding, just results.
+          </motion.p>
+        </motion.div>
 
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto items-start">
           {/* Left Column - Dynamic Features */}
-          <div className="space-y-4">
+          <motion.div
+            className="space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={featureContainerVariants}
+          >
             {features.map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={featureItemVariants}
                 onClick={() => toggleExpand(index)}
                 className={`cursor-pointer transition-all duration-500 ease-in-out ${
                   expandedIndex === index
@@ -127,18 +208,24 @@ const MasterclassSection = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Right Column - WebP Image Only */}
-          <div className="relative lg:sticky lg:top-8">
+          <motion.div
+            className="relative lg:sticky lg:top-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={imageVariants}
+          >
             <img
               src="/MasterClass.webp"
               alt="Masterclass"
               className="w-full h-auto object-contain"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
