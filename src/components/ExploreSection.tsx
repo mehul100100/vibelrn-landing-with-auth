@@ -123,7 +123,7 @@ const ExploreSection = ({title, bold_title}: {title: string, bold_title: string}
               className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
               {/* Thumbnail with Play Button */}
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden h-90 md:h-100 lg:h-100 lg:w-full">
                 <img
                   src={course.thumbnail}
                   alt={course.title}

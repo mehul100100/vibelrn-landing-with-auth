@@ -9,6 +9,7 @@ import CommunitySection from "@/components/CommunitySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import MentorSection from "@/components/MentorSection";
 import Footer from "@/components/Footer";
+import ToolMarquee from "@/components/ToolMarquee";
 
 const SvgRender = ({ svg }: { svg: string }) => {
   return (
@@ -66,26 +67,7 @@ const Index = () => {
         <HeroSection />
 
         {/* Tool Cards Marquee */}
-        <div className="mt-24 relative overflow-hidden">
-          <div className="flex animate-marquee pb-[10px]">
-            {/* First set of cards */}
-            {tools.map((tool, index) => (
-              <div key={`tool-1-${index}`} className="flex-shrink-0 w-80">
-                <ToolCard
-                  svg={<SvgRender svg={tool.svgPath} />}
-                />
-              </div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {tools.map((tool, index) => (
-              <div key={`tool-2-${index}`} className="flex-shrink-0 w-80">
-                <ToolCard
-                  svg={<SvgRender svg={tool.svgPath} />}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ToolMarquee />
       </main>
 
       {/* Trusted Section */}

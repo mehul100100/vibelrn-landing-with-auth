@@ -1,0 +1,91 @@
+// app/src/components/ToolMarquee.tsx
+"use client";
+import ToolCard from "@/components/ToolCard";
+import { motion } from "framer-motion";
+
+const SvgRender = ({ svg }: { svg: string }) => {
+  return (
+    <div className="w-full h-85 flex items-center justify-center">
+      <img
+        src={svg}
+        alt="tool-icon"
+        className="w-full h-full object-contain w-full"
+      />
+    </div>
+  );
+};
+
+const ToolMarquee = () => {
+  const tools = [
+    {
+      name: "Google Veo 3",
+      bgColor: "#E8F1FF",
+      logoColor: "#4285F4",
+      svgPath: "/veo3-card.svg",
+    },
+    {
+      name: "Chatgpt 4.1",
+      bgColor: "#D4EDE4",
+      logoColor: "#10A37F",
+      svgPath: "/chatgpt-card.svg",
+    },
+    {
+      name: "runway",
+      bgColor: "#E8E3F3",
+      logoColor: "#8B7AB8",
+      svgPath: "/runway-card.svg",
+    },
+    {
+      name: "Elevenlabs",
+      bgColor: "#FFF4D6",
+      logoColor: "#FFB800",
+      svgPath: "/elevenlabs-card.svg",
+    },
+    {
+      name: "Adobe Firefly",
+      bgColor: "#FFE8E8",
+      logoColor: "#FF0000",
+      svgPath: "/firefly-card.svg",
+    },
+  ];
+
+  // Container fade-in animation
+  const containerVariants: any = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      className="mt-24 relative overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+    >
+      <div className="flex animate-marquee pb-[10px]">
+        {/* First set of cards */}
+        {tools.map((tool, index) => (
+          <div key={`tool-1-${index}`} className="flex-shrink-0 w-80">
+            <ToolCard svg={<SvgRender svg={tool.svgPath} />} />
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {tools.map((tool, index) => (
+          <div key={`tool-2-${index}`} className="flex-shrink-0 w-80">
+            <ToolCard svg={<SvgRender svg={tool.svgPath} />} />
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+export default ToolMarquee;
