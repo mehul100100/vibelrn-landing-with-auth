@@ -4,6 +4,8 @@ import HeroSection from "@/components/HeroSection";
 import ToolCard from "@/components/ToolCard";
 import TrustedSection from "@/components/TrustedSection";
 import ExploreSection from "@/components/ExploreSection";
+import MasterclassSection from "@/components/MasterclassSection";
+import CommunitySection from "@/components/CommunitySection";
 
 const SvgRender = ({ svg }: { svg: string }) => {
   return (
@@ -89,6 +91,12 @@ const Index = () => {
       {/* Explore Section */}
       <ExploreSection title="Explore and Learn" bold_title="AI Tools" />
       <ExploreSection title="Trending Now:" bold_title="Top AI Tools" />
+
+      {/* Masterclass Section */}
+      <MasterclassSection />
+
+      {/* Community Section */}
+      <CommunitySection />
     </div>
   );
 };

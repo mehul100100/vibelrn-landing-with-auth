@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   const navItems = [
@@ -14,14 +15,11 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
+          <Link href='/'>
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-foreground tracking-tight">
-              silicon<span className="text-primary">.</span>
-            </span>
-            <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
-              ACADEMY
-            </span>
+            <img src="/silicon_academy_logo.svg" alt="" />
           </div>
+          </Link>
 
           {/* Navigation Items */}
           <div className="hidden md:flex items-center gap-8">
