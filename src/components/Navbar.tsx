@@ -1,6 +1,8 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const navItems = [
@@ -10,12 +12,30 @@ const Navbar = () => {
     { label: "News Feed", href: "#" },
   ];
 
+  // Only navbar container animation
+  const navbarVariants: any = {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md border-b border-border/50">
+    <motion.nav
+      className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md border-b border-border/50"
+      initial="hidden"
+      animate="visible"
+      variants={navbarVariants}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href='/'>
+          <Link href="/">
             <div className="flex items-center gap-2">
               <img src="/silicon_academy_logo.svg" alt="" />
             </div>
@@ -49,22 +69,26 @@ const Navbar = () => {
               Become Mentor
               <img src="/right_icon_dark.svg" className="" alt="right-icon" />
             </Button>
-            
+
             <SignedOut>
               <Link href="/sign-up">
-                <Button variant="dark" size="default" className="rounded-full px-6">
+                <Button
+                  variant="dark"
+                  size="default"
+                  className="rounded-full px-6"
+                >
                   Signup
                 </Button>
               </Link>
             </SignedOut>
-            
+
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

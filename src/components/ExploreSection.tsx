@@ -83,12 +83,13 @@ const ExploreSection = ({title, bold_title}: {title: string, bold_title: string}
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-row justify-between items-center mb-12 pb-2">
-          <div className="flex gap-3 overflow-x-auto scrollbar-hide">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-12 pb-2">
+          <div className="flex gap-2 md:gap-3 overflow-x-auto scrollbar-hide pb-2 -mx-2 px-2">
             {categories.map((category, index) => (
               <button
                 key={index}
-                className={`flex items-center gap-2 px-6 sm:px-5 py-2 sm:py-3 cursor-pointer rounded-full whitespace-nowrap font-medium transition-all duration-300 min-w-max ${
+                onClick={() => setActiveCategory(index)}
+                className={`flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 cursor-pointer rounded-full whitespace-nowrap font-medium transition-all duration-300 min-w-max ${
                   activeCategory === index
                     ? "bg-[#DEF2F1] border-2 text-[#2B7A78] border-[#5CC5BD]"
                     : "bg-[rgba(205,212,227,0.1)] text-[#677577] border-white border-2 hover:border-[#5CC5BD]"
@@ -101,14 +102,14 @@ const ExploreSection = ({title, bold_title}: {title: string, bold_title: string}
                       : "/magic-icon-dark.svg"
                   }
                   alt="magic-icon"
-                  className="w-5 h-5" // Ensures consistent icon size
+                  className="w-4 h-4 md:w-5 md:h-5"
                 />
-                <span className="text-sm sm:text-base">{category}</span>
+                <span className="text-xs md:text-sm lg:text-base">{category}</span>
               </button>
             ))}
           </div>
 
-          <button className="flex cursor-pointer items-center gap-2 text-[#2B7A78] underline underline-offset-4 hover:gap-3 transition-all duration-300 font-medium">
+          <button className="hidden md:flex cursor-pointer items-center gap-2 text-[#2B7A78] underline underline-offset-4 hover:gap-3 transition-all duration-300 font-medium whitespace-nowrap">
             See more Categories
             <ChevronRight className="w-5 h-5" />
           </button>
