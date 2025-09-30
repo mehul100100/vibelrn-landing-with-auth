@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -16,9 +16,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href='/'>
-          <div className="flex items-center gap-2">
-            <img src="/silicon_academy_logo.svg" alt="" />
-          </div>
+            <div className="flex items-center gap-2">
+              <img src="/silicon_academy_logo.svg" alt="" />
+            </div>
           </Link>
 
           {/* Navigation Items */}
@@ -49,9 +49,18 @@ const Navbar = () => {
               Become Mentor
               <img src="/right_icon_dark.svg" className="" alt="right-icon" />
             </Button>
-            <Button variant="dark" size="default" className="rounded-full px-6">
-              Signup
-            </Button>
+            
+            <SignedOut>
+              <Link href="/sign-up">
+                <Button variant="dark" size="default" className="rounded-full px-6">
+                  Signup
+                </Button>
+              </Link>
+            </SignedOut>
+            
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
         </div>
       </div>

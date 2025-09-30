@@ -6,6 +6,9 @@ import TrustedSection from "@/components/TrustedSection";
 import ExploreSection from "@/components/ExploreSection";
 import MasterclassSection from "@/components/MasterclassSection";
 import CommunitySection from "@/components/CommunitySection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import MentorSection from "@/components/MentorSection";
+import Footer from "@/components/Footer";
 
 const SvgRender = ({ svg }: { svg: string }) => {
   return (
@@ -97,6 +100,16 @@ const Index = () => {
 
       {/* Community Section */}
       <CommunitySection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Mentor Section */}
+      <MentorSection />
+
+      {/* Footer */}
+      <Footer />
+
     </div>
   );
 };
