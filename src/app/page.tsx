@@ -1,6 +1,9 @@
+// app/src/page.tsx
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ToolCard from "@/components/ToolCard";
+import TrustedSection from "@/components/TrustedSection";
+import ExploreSection from "@/components/ExploreSection";
 
 const SvgRender = ({ svg }: { svg: string }) => {
   return (
@@ -53,13 +56,13 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <main className="container mx-auto px-6 mt-18 mb-20 pb-20 pt-10 w-full rounded-[24px]
+      <main className="container mx-auto px-6 mt-18 mb-10 pb-20 pt-10 w-full rounded-[24px]
       bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)]">
         <HeroSection />
 
         {/* Tool Cards Marquee */}
         <div className="mt-24 relative overflow-hidden">
-          <div className="flex animate-marquee pb-[200px]">
+          <div className="flex animate-marquee pb-[10px]">
             {/* First set of cards */}
             {tools.map((tool, index) => (
               <div key={`tool-1-${index}`} className="flex-shrink-0 w-80">
@@ -79,6 +82,13 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      {/* Trusted Section */}
+      <TrustedSection />
+
+      {/* Explore Section */}
+      <ExploreSection title="Explore and Learn" bold_title="AI Tools" />
+      <ExploreSection title="Trending Now:" bold_title="Top AI Tools" />
     </div>
   );
 };
