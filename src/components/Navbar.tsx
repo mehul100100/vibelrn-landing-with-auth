@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { ClerkLoading, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -69,6 +69,11 @@ const Navbar = () => {
               Become Mentor
               <img src="/right_icon_dark.svg" className="" alt="right-icon" />
             </Button>
+
+            <ClerkLoading>
+              {/* Skeleton with same dimensions as the signup button */}
+              <div className="sm:w-[98px] sm:h-[40px] rounded-full bg-gray-200 animate-pulse" />
+            </ClerkLoading>
 
             <SignedOut>
               <Link href="/sign-up">
