@@ -89,9 +89,9 @@ const HeroSection = () => {
           className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-10"
           variants={fadeUpVariants}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Discover, learn, and apply cutting-edge AI tools without the overwhelm.
           <br />
-          Suspendisse varius enim in eros elementum tristique.
+          From automation to creativity, we help you unlock real results, fast.
         </motion.p>
       </div>
 
@@ -100,8 +100,7 @@ const HeroSection = () => {
         className="text-sm font-medium text-foreground"
         variants={fadeUpVariants}
       >
-        <span className="font-bold">999 + AI Tools</span> & Learning Series
-        with top Tutors
+        <span className="font-bold">999+ AI Tools</span> & Learning Series with top Tutors
       </motion.p>
 
       {/* Search Bar */}

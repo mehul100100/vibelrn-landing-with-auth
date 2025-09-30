@@ -12,7 +12,7 @@ const CommunitySection = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-6 py-3 bg-transparent rounded-full border-[1px] border-[#DDDDDD]">
               <span className="text-sm text-gray-700 font-medium">
-                Lorem ipsum dolor sit
+                Built for creators, devs & curious minds
               </span>
             </div>
 
@@ -27,8 +27,8 @@ const CommunitySection = () => {
 
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-              Sed iaculis aenean sit sed risus arcu vitae integer elit. Volutpat
-              amet etiam mi nunc diam nulla. Fames feugiat
+              Connect with people who are actually building cool stuff with AI.
+              Ask questions, share ideas, or just vibe - no gatekeeping.
             </p>
 
             {/* CTA Button */}

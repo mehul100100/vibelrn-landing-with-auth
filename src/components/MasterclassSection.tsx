@@ -120,7 +120,7 @@ const MasterclassSection = () => {
           <motion.div className="flex justify-center mb-8" variants={fadeUpVariants}>
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full shadow-sm border border-gray-200">
               <span className="text-sm text-gray-700 font-medium">
-                Lorem ipsum dolor sit
+              Smarter, not harder
               </span>
             </div>
           </motion.div>

@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center sm:px-15 px-5 py-3 bg-transparent rounded-full border border-gray-200">
             <span className="text-sm text-gray-700 font-medium">
-              Lorem ipsum dolor sit
+            What people are actually saying
             </span>
           </div>
         </div>
@@ -23,15 +23,15 @@ const TestimonialsSection = () => {
         {/* Main Heading */}
         <div className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-            Volutpat amet etiam
+          This stuff just works
           </h2>
         </div>
 
         {/* Description */}
         <p className="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-16 leading-relaxed">
-          Sed iaculis aenean sit sed risus arcu vitae integer elit.
+        We’re not making this up - real users, real wins. Whether it’s saving hours or launching projects,
           <br className="hidden md:block" />
-          Volutpat amet etiam mi nunc diam nulla. Fames feugiat
+          people are getting results.
         </p>
 
         {/* Testimonials Marquee */}
