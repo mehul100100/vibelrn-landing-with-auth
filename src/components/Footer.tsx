@@ -1,6 +1,7 @@
 // app/src/components/Footer.tsx
 import { Info } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Footer = () => {
   const footerLinks = [
@@ -55,12 +56,12 @@ const Footer = () => {
                   
                   <span>
                     Your email is safe with us.{" "}
-                    <a
+                    <Link
                       href="/#"
                       className="underline hover:text-gray-600"
                     >
                       privacy policy
-                    </a>
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -84,14 +85,14 @@ const Footer = () => {
             {/* Navigation Links */}
             <nav className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
               {footerLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
                 //   href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
                 href="#"
                   className="text-gray-400 hover:text-gray-600 transition-colors duration-300"
                 >
                   {link}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
