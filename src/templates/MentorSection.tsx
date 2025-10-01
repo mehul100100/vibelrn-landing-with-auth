@@ -1,12 +1,10 @@
-// app/src/components/MentorSection.tsx
-import { ArrowRight, User } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 const MentorSection = () => {
   return (
     <div className="w-full bg-light sm:mt-[-40] relative overflow-hidden">
       <div
-        className="container mx-auto px-6 mb-10 pb-0 pt-10 w-full rounded-[24px]
+        className="lg:container mx-auto px-6 mb-10 pb-0 pt-10 w-full rounded-[24px]
       bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)]"
       >
         <div className="container mx-auto px-6 relative z-10">

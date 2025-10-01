@@ -1,115 +1,25 @@
-// app/src/components/MasterclassSection.tsx
 "use client";
 import { useState } from "react";
-import { Pen, Star, Zap, Target, Flag } from "lucide-react";
 import { motion } from "framer-motion";
+import { features } from "@/lib/constants/features";
+import {
+  containerVariants,
+  fadeUpVariants,
+  featureContainerVariants,
+  featureItemVariants,
+  imageVariants,
+} from "@/lib/constants/animations";
 
 const MasterclassSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
-
-  const features = [
-    {
-      icon: <Pen className="w-5 h-5 text-gray-700" />,
-      title: "Real use cases tailored for business & creative work",
-      description:
-        "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
-    },
-    {
-      icon: <Star className="w-5 h-5 text-gray-700" />,
-      title: "Step-by-step lessons anyone can follow",
-      description:
-        "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
-    },
-    {
-      icon: <Zap className="w-5 h-5 text-gray-700" />,
-      title: "Bite-sized videos that fit your schedule",
-      description:
-        "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
-    },
-    {
-      icon: <Target className="w-5 h-5 text-gray-700" />,
-      title: "Curated tools to boost daily productivity",
-      description:
-        "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
-    },
-    {
-      icon: <Flag className="w-5 h-5 text-gray-700" />,
-      title: "Learn by doing, not by reading manuals",
-      description:
-        "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
-    },
-  ];
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? -1 : index);
   };
 
-  // Container variants for staggered children
-  const containerVariants: any = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  // Fade up animation
-  const fadeUpVariants: any = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-
-  // Feature items stagger animation
-  const featureContainerVariants: any = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const featureItemVariants: any = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.4,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-
-  // Image animation
-  const imageVariants: any = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.22, 1, 0.36, 1],
-        delay: 0.3,
-      },
-    },
-  };
-
   return (
     <div className="w-full py-20 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="lg:container mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -117,10 +27,13 @@ const MasterclassSection = () => {
           variants={containerVariants}
         >
           {/* Badge */}
-          <motion.div className="flex justify-center mb-8" variants={fadeUpVariants}>
+          <motion.div
+            className="flex justify-center mb-8"
+            variants={fadeUpVariants}
+          >
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full shadow-sm border border-gray-200">
               <span className="text-sm text-gray-700 font-medium">
-              Smarter, not harder
+                Smarter, not harder
               </span>
             </div>
           </motion.div>
@@ -190,7 +103,9 @@ const MasterclassSection = () => {
                   <div className="flex-1 min-w-0">
                     <h3
                       className={`font-medium text-gray-900 transition-all duration-500 ease-in-out ${
-                        expandedIndex === index ? "text-xl mb-3" : "text-lg mb-0"
+                        expandedIndex === index
+                          ? "text-xl mb-3"
+                          : "text-lg mb-0"
                       }`}
                     >
                       {feature.title}

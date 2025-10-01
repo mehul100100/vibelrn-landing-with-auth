@@ -1,6 +1,7 @@
 "use client"
 import { Search } from "lucide-react";
 import { motion } from "framer-motion";
+import ToolMarquee from "@/components/ToolMarquee";
 
 const HeroSection = () => {
   // Container animation for staggering children
@@ -56,8 +57,10 @@ const HeroSection = () => {
   };
 
   return (
+    <div className="lg:container mx-auto px-6 mt-18 mb-10 pb-20 pt-10 w-full rounded-[24px]
+        bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)]">
     <motion.div
-      className="max-w-4xl mx-auto text-center space-y-8"
+      className="mx-auto text-center space-y-8"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -147,7 +150,9 @@ const HeroSection = () => {
           </motion.button>
         </div>
       </motion.div>
+      <ToolMarquee />
     </motion.div>
+    </div>
   );
 };
 

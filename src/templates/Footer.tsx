@@ -1,6 +1,5 @@
-// app/src/components/Footer.tsx
 import { Info } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Footer = () => {
@@ -16,7 +15,7 @@ const Footer = () => {
     <footer className="w-full bg-light">
       {/* Newsletter Section */}
       <div
-        className="container mx-auto px-6 mb-10 pb-10 pt-10 w-full rounded-[24px]
+        className="lg:container mx-auto px-6 mb-10 pb-10 pt-10 w-full rounded-[24px]
       bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)]"
       >
         <div className="max-w-6xl mx-auto">

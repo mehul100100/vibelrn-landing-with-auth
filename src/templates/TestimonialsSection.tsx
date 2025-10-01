@@ -1,4 +1,3 @@
-// app/src/components/TestimonialsSection.tsx
 "use client";
 
 const TestimonialsSection = () => {
@@ -9,7 +8,7 @@ const TestimonialsSection = () => {
 
   return (
     <div className="w-full py-10 bg-light">
-      <div className="container mx-auto px-6 mb-10 pb-20 pt-10 w-full rounded-[24px]
+      <div className="lg:container mx-auto px-6 mb-10 pb-20 pt-10 w-full rounded-[24px]
       bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)]">
         {/* Badge */}
         <div className="flex justify-center mb-8">

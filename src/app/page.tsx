@@ -1,98 +1,27 @@
-// app/src/page.tsx
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import ToolCard from "@/components/ToolCard";
-import TrustedSection from "@/components/TrustedSection";
-import ExploreSection from "@/components/ExploreSection";
-import MasterclassSection from "@/components/MasterclassSection";
-import CommunitySection from "@/components/CommunitySection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import MentorSection from "@/components/MentorSection";
-import Footer from "@/components/Footer";
-import ToolMarquee from "@/components/ToolMarquee";
-
-const SvgRender = ({ svg }: { svg: string }) => {
-  return (
-    <div className="w-full h-85 flex items-center justify-center">
-      <img
-        src={svg}
-        alt="tool-icon"
-        className="w-full h-full object-contain w-full"
-      />
-    </div>
-  );
-};
+import Navbar from "@/templates/Navbar";
+import HeroSection from "@/templates/HeroSection";
+import TrustedSection from "@/templates/TrustedSection";
+import ExploreSection from "@/templates/ExploreSection";
+import MasterclassSection from "@/templates/MasterclassSection";
+import CommunitySection from "@/templates/CommunitySection";
+import TestimonialsSection from "@/templates/TestimonialsSection";
+import MentorSection from "@/templates/MentorSection";
+import Footer from "@/templates/Footer";
 
 const Index = () => {
-  const tools = [
-    { 
-      name: "Google Veo 3", 
-      bgColor: "#E8F1FF", 
-      logoColor: "#4285F4",
-      svgPath: "/veo3-card.svg"
-    },
-    { 
-      name: "Chatgpt 4.1", 
-      bgColor: "#D4EDE4", 
-      logoColor: "#10A37F",
-      svgPath: "/chatgpt-card.svg"
-    },
-    { 
-      name: "runway", 
-      bgColor: "#E8E3F3", 
-      logoColor: "#8B7AB8",
-      svgPath: "/runway-card.svg"
-    },
-    { 
-      name: "Elevenlabs", 
-      bgColor: "#FFF4D6", 
-      logoColor: "#FFB800",
-      svgPath: "/elevenlabs-card.svg"
-    },
-    { 
-      name: "Adobe Firefly", 
-      bgColor: "#FFE8E8", 
-      logoColor: "#FF0000",
-      svgPath: "/firefly-card.svg"
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Navbar />
-
-      {/* Hero Section */}
-      <main className="container mx-auto px-6 mt-18 mb-10 pb-20 pt-10 w-full rounded-[24px]
-      bg-[linear-gradient(to_bottom,_#f4f4f4_0%25,_#ffffff_60%25,_#f4f4f4_100%25)]">
-        <HeroSection />
-
-        {/* Tool Cards Marquee */}
-        <ToolMarquee />
-      </main>
-
-      {/* Trusted Section */}
+      <HeroSection />
       <TrustedSection />
-
-      {/* Explore Section */}
       <ExploreSection title="Explore and Learn" bold_title="AI Tools" />
       <ExploreSection title="Trending Now:" bold_title="Top AI Tools" />
-
-      {/* Masterclass Section */}
       <MasterclassSection />
-
-      {/* Community Section */}
       <CommunitySection />
-
-      {/* Testimonials Section */}
       <TestimonialsSection />
-
-      {/* Mentor Section */}
       <MentorSection />
-
-      {/* Footer */}
       <Footer />
-
-    </div>
+    </>
   );
 };
 

@@ -1,11 +1,9 @@
-// app/src/components/CommunitySection.tsx
-import { Heart, MessageCircle, Share2, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 const CommunitySection = () => {
   return (
     <div className="w-full py-20 bg-gradient-to-b from-white to-[#E0F7F7]">
-      <div className="container mx-auto px-6">
+      <div className="lg:container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">

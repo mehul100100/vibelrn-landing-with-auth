@@ -1,4 +1,3 @@
-// app/src/components/ExploreSection.tsx
 "use client";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
@@ -74,7 +73,7 @@ const ExploreSection = ({title, bold_title}: {title: string, bold_title: string}
 
   return (
     <div className="w-full py-10 bg-white">
-      <div className="container mx-auto px-6">
+      <div className="lg:container mx-auto px-6">
         {/* Section Header */}
         <div className="flex items-center mb-10">
           <h2 className="text-3xl md:text-4xl text-foreground">
