@@ -5,10 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-
 import { navbarVariants } from "@/lib/constants/animations";
 import { navItems, NAVBAR_STYLES } from "@/lib/constants/navbar";
-
 import { NavLinks } from "@/components/navbar/NavLinks";
 import { AuthSection } from "@/components/navbar/AuthSection";
 import { MobileMenu } from "@/components/navbar/MobileMenu";
