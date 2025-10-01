@@ -15,15 +15,15 @@ export const CourseGrid: React.FC<CourseGridProps> = ({ courses }) => {
 
   return (
     <ul
-      className={EXPLORE_STYLES.grid}
+      className={EXPLORE_STYLES.flex}
       role="list"
       aria-label="Course list"
     >
       {courses.map((course, index) => (
-        <li key={course.id}>
+        <li key={course.id} className="md:min-w-[300px]">
           <CourseCard
             course={course}
-            priority={index < 4} // Prioritize first 4 images
+            priority={index < 4}
           />
         </li>
       ))}

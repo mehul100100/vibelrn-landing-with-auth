@@ -9,16 +9,14 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, priority = false
       aria-labelledby={`course-title-${course.id}`}
     >
       <a href={`/courses/${course.id}`} className="block h-full">
-        <div className={EXPLORE_STYLES.card.thumbnail}>
-          <Image
-            src={course.thumbnail}
-            alt={`${course.title} course thumbnail`}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className={EXPLORE_STYLES.card.image}
-            priority={priority}
-          />
-        </div>
+        <Image
+          src={course.thumbnail}
+          alt={`${course.title} course thumbnail`}
+          width={400} // This is the max width
+          height={400}
+          className={EXPLORE_STYLES.card.image}
+          priority={priority}
+        />
         <div className="p-4 hidden">
           <h3
             id={`course-title-${course.id}`}
