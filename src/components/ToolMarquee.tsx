@@ -1,6 +1,6 @@
 "use client";
 import ToolCard from "@/components/ToolCard";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { tools } from "@/lib/constants/tools";
 
 const SvgRender = ({ svg }: { svg: string }) => {
@@ -17,8 +17,7 @@ const SvgRender = ({ svg }: { svg: string }) => {
 
 const ToolMarquee = () => {
 
-  // Container fade-in animation
-  const containerVariants: any = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -39,13 +38,11 @@ const ToolMarquee = () => {
       variants={containerVariants}
     >
       <div className="flex animate-marquee pb-[10px]">
-        {/* First set of cards */}
         {tools.map((tool, index) => (
           <div key={`tool-1-${index}`} className="flex-shrink-0 w-80">
             <ToolCard svg={<SvgRender svg={tool.svgPath} />} />
           </div>
         ))}
-        {/* Duplicate set for seamless loop */}
         {tools.map((tool, index) => (
           <div key={`tool-2-${index}`} className="flex-shrink-0 w-80">
             <ToolCard svg={<SvgRender svg={tool.svgPath} />} />
