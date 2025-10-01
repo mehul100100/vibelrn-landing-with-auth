@@ -14,8 +14,8 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <TrustedSection />
-      <ExploreSection title="Explore and Learn" bold_title="AI Tools" />
-      <ExploreSection title="Trending Now:" bold_title="Top AI Tools" />
+      <ExploreSection title="Explore and Learn" boldTitle="AI Tools" />
+      <ExploreSection title="Trending Now:" boldTitle="Top AI Tools" />
       <MasterclassSection />
       <CommunitySection />
       <TestimonialsSection />
