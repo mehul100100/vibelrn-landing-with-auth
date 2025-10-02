@@ -1,4 +1,17 @@
+import { Variants } from "framer-motion";
 import { NavItem } from "../types";
+
+export const navbarVariants: Variants = {
+  hidden: { y: -100, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
 
 export const NAVBAR_STYLES = {
   container: "max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8",

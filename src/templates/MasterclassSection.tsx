@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { features } from "@/lib/constants/features";
 import {
+  features,
   containerVariants,
   fadeUpVariants,
   featureContainerVariants,
   featureItemVariants,
   imageVariants,
-} from "@/lib/constants/animations";
+} from "@/lib/constants/features";
 
 const MasterclassSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
@@ -26,7 +26,7 @@ const MasterclassSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          {/* Badge */}
+
           <motion.div
             className="flex justify-center mb-8"
             variants={fadeUpVariants}
@@ -38,7 +38,7 @@ const MasterclassSection = () => {
             </div>
           </motion.div>
 
-          {/* Main Heading */}
+
           <motion.div className="text-center mb-6" variants={fadeUpVariants}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Masterclass for the AI-Curious
@@ -58,7 +58,7 @@ const MasterclassSection = () => {
 
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto items-start">
-          {/* Left Column - Dynamic Features */}
+
           <motion.div
             className="space-y-4"
             initial="hidden"
@@ -127,7 +127,7 @@ const MasterclassSection = () => {
             ))}
           </motion.div>
 
-          {/* Right Column - WebP Image Only */}
+
           <motion.div
             className="relative lg:sticky lg:top-8"
             initial="hidden"

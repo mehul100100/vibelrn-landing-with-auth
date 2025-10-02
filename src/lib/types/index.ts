@@ -18,18 +18,6 @@ export interface Course {
   isPro: boolean;
 }
 
-export interface Feature {
-  icon: ReactNode;
-  title: string;
-  description: string;
-}
-
-export interface FeatureItemProps {
-  feature: Feature;
-  isExpanded: boolean;
-  onClick: () => void;
-}
-
 export interface NavItem {
   label: string;
   href: string;
