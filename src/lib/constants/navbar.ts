@@ -1,5 +1,5 @@
 import { Variants } from "framer-motion";
-import { NavItem } from "../types";
+import { NavItem } from "../types/navbar";
 
 export const navbarVariants: Variants = {
   hidden: { y: -100, opacity: 0 },

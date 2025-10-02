@@ -1,4 +1,5 @@
 import { logos } from "@/lib/constants/trustedsections";
+import Image from "next/image";
 
 const TrustedSection = () => {
   return (
@@ -8,10 +9,12 @@ const TrustedSection = () => {
           <div className="flex animate-marquee gap-8 md:gap-12">
             {logos.map((logo, index) => (
               <div key={index} className="h-6 flex-shrink-0 flex items-center">
-                <img
+                <Image
                   src={logo.url}
                   alt={logo.name}
-                  className="h-full w-auto grayscale opacity-60"
+                  width={100}
+                  height={100}
+                  className="grayscale opacity-60"
                 />
               </div>
             ))}
@@ -20,10 +23,12 @@ const TrustedSection = () => {
                 key={`duplicate-${index}`}
                 className="h-6 flex-shrink-0 flex items-center"
               >
-                <img
+                <Image
                   src={logo.url}
                   alt={logo.name}
-                  className="h-full w-auto grayscale opacity-60"
+                  width={100}
+                  height={100}
+                  className="grayscale opacity-60"
                 />
               </div>
             ))}
