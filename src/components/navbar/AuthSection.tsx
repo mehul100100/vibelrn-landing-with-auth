@@ -29,7 +29,7 @@ export const AuthSection: React.FC = () => {
       {/* Clerk Loading State */}
       <ClerkLoading>
         <div
-          className="h-10 w-10 animate-pulse rounded-full bg-gray-200"
+          className="h-10 w-[101.69px] animate-pulse rounded-full bg-gray-200"
           aria-label="Loading authentication"
         />
       </ClerkLoading>
