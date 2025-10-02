@@ -1,24 +1,21 @@
 import type { FooterLogoProps } from '@/lib/types/footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FOOTER_STYLES } from '@/lib/constants/footer';
 
 export const FooterLogo: React.FC<FooterLogoProps> = ({
   src,
   alt,
-  width = 90,
-  height = 90,
 }) => {
   return (
-    <div className={FOOTER_STYLES.navigation.logoWrapper}>
-      <Link href="/" aria-label={`${alt} - Go to homepage`}>
+    <Link href="/" aria-label={`${alt} - Go to homepage`}>
+      <div className="relative flex w-[100px] h-[100px]">
         <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          fill
+          style={{ objectFit: 'contain' }}
         />
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
