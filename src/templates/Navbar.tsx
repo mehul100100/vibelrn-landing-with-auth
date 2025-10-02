@@ -28,12 +28,13 @@ const Navbar: React.FC = () => {
         <div className={NAVBAR_STYLES.container}>
           <div className={NAVBAR_STYLES.content}>
             <Link href="/" aria-label="Go to Silicon Academy homepage">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center h-10">
                 <Image
-                  src="/silicon_academy_logo.svg"
+                  src="/logo.png"
                   alt="Silicon Academy Logo"
                   width={90}
                   height={90}
+                  className="object-contain"
                   priority
                 />
               </div>

@@ -55,7 +55,7 @@ export const FOOTER_CONTENT = {
     emailPlaceholder: 'Enter your email',
   },
   logo: {
-    src: '/silicon_academy_logo.svg',
+    src: '/logo.png',
     alt: 'Silicon Academy',
   },
   copyright: {
