@@ -2,15 +2,20 @@
 import ToolCard from "@/components/ToolCard";
 import { motion, Variants } from "framer-motion";
 import { tools } from "@/lib/constants/tools";
+import Image from "next/image";
 
 const SvgRender = ({ svg }: { svg: string }) => {
   return (
-    <div className="w-full h-85 flex items-center justify-center">
-      <img
-        src={svg}
-        alt="tool-icon"
-        className="w-full h-full object-contain w-full"
-      />
+    <div className="w-full h-[420px] rounded-3xl overflow-hidden flex items-center justify-center">
+      <div className="p-4">
+        <Image
+          src={svg}
+          alt="tool-icon"
+          width={350}
+          height={350}
+          className="object-contain max-w-[350px] max-h-[350px] rounded-3xl"
+        />
+      </div>
     </div>
   );
 };
