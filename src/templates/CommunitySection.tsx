@@ -1,56 +1,37 @@
-import { Button } from "@/components/ui/button";
+import { CommunityContent } from "@/components/community/CommunityContent";
+import { CommunityVisual } from "@/components/community/CommunityVisual";
+import { COMMUNITY_STYLES, COMMUNITY_CONTENT } from "@/lib/constants/community";
+import type { CommunitySectionProps } from "@/lib/types/community";
 
-const CommunitySection = () => {
+const CommunitySection: React.FC<CommunitySectionProps> = ({
+  badge = COMMUNITY_CONTENT.badge,
+  heading = COMMUNITY_CONTENT.heading,
+  headingBold = COMMUNITY_CONTENT.headingBold,
+  description = COMMUNITY_CONTENT.description,
+  ctaText = COMMUNITY_CONTENT.ctaText,
+  ctaLink = COMMUNITY_CONTENT.ctaLink,
+  imageSrc = COMMUNITY_CONTENT.imageSrc,
+  imageAlt = COMMUNITY_CONTENT.imageAlt,
+}) => {
   return (
-    <div className="w-full py-20 bg-gradient-to-b from-white to-[#E0F7F7]">
-      <div className="lg:container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
-          {/* Left Column - Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center px-6 py-3 bg-transparent rounded-full border-[1px] border-[#DDDDDD]">
-              <span className="text-sm text-gray-700 font-medium">
-                Built for creators, devs & curious minds
-              </span>
-            </div>
-
-            {/* Heading */}
-            <div className="space-y-4">
-              <h2 className="text-5xl md:text-6xl text-gray-900 leading-tight">
-                Step Into the AI
-                <br />
-                <span className="font-bold">Community</span>
-              </h2>
-            </div>
-
-            {/* Description */}
-            <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-              Connect with people who are actually building cool stuff with AI.
-              Ask questions, share ideas, or just vibe - no gatekeeping.
-            </p>
-
-            {/* CTA Button */}
-            <Button
-              variant="dark"
-              size="default"
-              className="rounded-full px-6 py-6"
-            >
-              Join the Community
-              <img src="/right_icon.svg" className="" alt="right-icon" />
-            </Button>
-          </div>
-
-          {/* Right Column - SVG Image */}
-          <div className="relative flex items-center border-[6px] rounded-[35px] border-[#ffffff5e] shadow-xl justify-center">
-            <img
-              src="/community-testimonial.svg"
-              alt="Community Testimonials"
-              className="w-full h-auto object-contain"
-            />
-          </div>
+    <section
+      className={COMMUNITY_STYLES.wrapper}
+      aria-labelledby="community-heading"
+    >
+      <div className={COMMUNITY_STYLES.container}>
+        <div className={COMMUNITY_STYLES.layout}>
+          <CommunityContent
+            badge={badge}
+            heading={heading}
+            headingBold={headingBold}
+            description={description}
+            ctaText={ctaText}
+            ctaLink={ctaLink}
+          />
+          <CommunityVisual imageSrc={imageSrc} imageAlt={imageAlt} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
