@@ -1,8 +1,8 @@
-import { MentorHeader } from "@/components/mentor/MentorHeader";
-import { MentorCTA } from "@/components/mentor/MentorCTA";
-import { MentorVisual } from "@/components/mentor/MentorVisual";
-import { MENTOR_STYLES, MENTOR_CONTENT } from "@/lib/constants/mentor";
-import type { MentorSectionProps } from "@/lib/types/mentor";
+import type { MentorSectionProps } from '@/lib/types/mentor';
+import { MentorCTA } from '@/components/mentor/MentorCTA';
+import { MentorHeader } from '@/components/mentor/MentorHeader';
+import { MentorVisual } from '@/components/mentor/MentorVisual';
+import { MENTOR_CONTENT, MENTOR_STYLES } from '@/lib/constants/mentor';
 
 const MentorSection: React.FC<MentorSectionProps> = ({
   badge = MENTOR_CONTENT.badge,

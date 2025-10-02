@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import { COMMUNITY_STYLES } from "@/lib/constants/community";
-import type { CommunityContentProps } from "@/lib/types/community";
+import type { CommunityContentProps } from '@/lib/types/community';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { COMMUNITY_STYLES } from '@/lib/constants/community';
 
 export const CommunityContent: React.FC<CommunityContentProps> = ({
   badge,

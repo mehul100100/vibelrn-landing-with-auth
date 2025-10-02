@@ -1,14 +1,14 @@
-import { TestimonialsHeader } from "@/components/testimonials/TestimonialsHeader";
-import { TestimonialMarquee } from "@/components/testimonials/TestimonialMarquee";
-import { SAMPLE_TESTIMONIALS, TESTIMONIALS_STYLES, TESTIMONIALS_CONTENT } from "@/lib/constants/testimonials";
-import type { Testimonial } from "@/lib/types/testimonials";
+import type { Testimonial } from '@/lib/types/testimonials';
+import { TestimonialMarquee } from '@/components/testimonials/TestimonialMarquee';
+import { TestimonialsHeader } from '@/components/testimonials/TestimonialsHeader';
+import { SAMPLE_TESTIMONIALS, TESTIMONIALS_CONTENT, TESTIMONIALS_STYLES } from '@/lib/constants/testimonials';
 
-interface TestimonialsSectionProps {
+type TestimonialsSectionProps = {
   testimonials?: Testimonial[];
   badge?: string;
   heading?: string;
   description?: string;
-}
+};
 
 const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   testimonials = SAMPLE_TESTIMONIALS,

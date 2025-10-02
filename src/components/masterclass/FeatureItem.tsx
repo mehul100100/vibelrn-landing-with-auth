@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
-import { featureItemVariants } from "@/lib/constants/features";
+import type { FeatureItemProps } from '@/lib/types/feature';
+import { motion } from 'framer-motion';
+import { featureItemVariants } from '@/lib/constants/features';
 import {
-  MASTERCLASS_STYLES,
   FEATURE_STYLES,
-} from "@/lib/constants/masterclass";
-import type { FeatureItemProps } from "@/lib/types/feature";
+  MASTERCLASS_STYLES,
+} from '@/lib/constants/masterclass';
 
 export const FeatureItem: React.FC<FeatureItemProps> = ({
   feature,
@@ -13,7 +13,7 @@ export const FeatureItem: React.FC<FeatureItemProps> = ({
   onToggle,
 }) => {
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" || e.key === " ") {
+    if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       onToggle();
     }
@@ -51,7 +51,7 @@ export const FeatureItem: React.FC<FeatureItemProps> = ({
             >
               {feature.icon}
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="min-w-0 flex-1">
               <span
                 className={`${MASTERCLASS_STYLES.accordion.title.base} ${
                   isExpanded
@@ -72,7 +72,7 @@ export const FeatureItem: React.FC<FeatureItemProps> = ({
                 aria-labelledby={`accordion-${feature.id}`}
                 aria-hidden={!isExpanded}
               >
-                <p className="text-gray-600 leading-relaxed">
+                <p className="leading-relaxed text-gray-600">
                   {feature.description}
                 </p>
               </div>

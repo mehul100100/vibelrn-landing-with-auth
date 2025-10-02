@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { EXPLORE_STYLES } from "@/lib/constants/explore";
-import type { CourseCardProps } from "@/lib/types/explore";
+import type { CourseCardProps } from '@/lib/types/explore';
+import Image from 'next/image';
+import { EXPLORE_STYLES } from '@/lib/constants/explore';
 
 export const CourseCard: React.FC<CourseCardProps> = ({ course, priority = false }) => {
   return (
@@ -17,20 +17,22 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, priority = false
           className={EXPLORE_STYLES.card.image}
           priority={priority}
         />
-        <div className="p-4 hidden">
+        <div className="hidden p-4">
           <h3
             id={`course-title-${course.id}`}
-            className="text-lg font-semibold text-foreground line-clamp-2 mb-2"
+            className="text-foreground mb-2 line-clamp-2 text-lg font-semibold"
           >
             {course.title}
           </h3>
-          <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+          <p className="text-muted-foreground mb-3 line-clamp-2 text-sm">
             {course.description}
           </p>
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
+          <div className="text-muted-foreground flex items-center justify-between text-xs">
             <span>{course.instructor}</span>
             <span className="flex items-center gap-1">
-              ⭐ {course.rating}
+              ⭐
+              {' '}
+              {course.rating}
             </span>
           </div>
         </div>

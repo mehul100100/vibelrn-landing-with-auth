@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import { MENTOR_STYLES } from "@/lib/constants/mentor";
-import type { MentorCTAProps } from "@/lib/types/mentor";
+import type { MentorCTAProps } from '@/lib/types/mentor';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { MENTOR_STYLES } from '@/lib/constants/mentor';
 
 export const MentorCTA: React.FC<MentorCTAProps> = ({ ctaText, ctaLink }) => {
   return (

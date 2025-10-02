@@ -1,11 +1,11 @@
-import { CourseCard } from "./CourseCard";
-import { EXPLORE_STYLES } from "@/lib/constants/explore";
-import type { CourseGridProps } from "@/lib/types/explore";
+import type { CourseGridProps } from '@/lib/types/explore';
+import { EXPLORE_STYLES } from '@/lib/constants/explore';
+import { CourseCard } from './CourseCard';
 
 export const CourseGrid: React.FC<CourseGridProps> = ({ courses }) => {
   if (!courses || courses.length === 0) {
     return (
-      <div className="text-center py-12">
+      <div className="py-12 text-center">
         <p className="text-muted-foreground text-lg">
           No courses available in this category.
         </p>
@@ -16,7 +16,6 @@ export const CourseGrid: React.FC<CourseGridProps> = ({ courses }) => {
   return (
     <ul
       className={EXPLORE_STYLES.flex}
-      role="list"
       aria-label="Course list"
     >
       {courses.map((course, index) => (

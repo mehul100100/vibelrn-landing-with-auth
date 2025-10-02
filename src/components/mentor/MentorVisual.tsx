@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { MENTOR_STYLES } from "@/lib/constants/mentor";
-import type { MentorVisualProps } from "@/lib/types/mentor";
+import type { MentorVisualProps } from '@/lib/types/mentor';
+import Image from 'next/image';
+import { MENTOR_STYLES } from '@/lib/constants/mentor';
 
 export const MentorVisual: React.FC<MentorVisualProps> = ({
   imageSrc,

@@ -1,13 +1,12 @@
-"use client";
-import { motion } from "framer-motion";
-import ToolMarquee from "@/components/ToolMarquee";
-import { HeroHeading } from "@/components/hero/HeroHeading";
-import { HeroSearchBar } from "@/components/hero/HeroSearchBar";
-import { ToolsCount } from "@/components/hero/ToolsCount";
-import { HERO_ANIMATIONS, HERO_STYLES, HERO_CONTENT } from "@/lib/constants/hero";
+'use client';
+import { motion } from 'framer-motion';
+import { HeroHeading } from '@/components/hero/HeroHeading';
+import { HeroSearchBar } from '@/components/hero/HeroSearchBar';
+import { ToolsCount } from '@/components/hero/ToolsCount';
+import ToolMarquee from '@/components/ToolMarquee';
+import { HERO_ANIMATIONS, HERO_CONTENT, HERO_STYLES } from '@/lib/constants/hero';
 
 const HeroSection: React.FC = () => {
-
   return (
     <section
       className={`${HERO_STYLES.container} ${HERO_STYLES.gradient}`}

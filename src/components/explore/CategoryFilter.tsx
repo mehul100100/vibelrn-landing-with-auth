@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { ChevronRight } from "lucide-react";
-import { EXPLORE_STYLES, ICON_PATHS } from "@/lib/constants/explore";
-import type { CategoryFilterProps } from "@/lib/types/explore";
+import type { CategoryFilterProps } from '@/lib/types/explore';
+import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { EXPLORE_STYLES, ICON_PATHS } from '@/lib/constants/explore';
 
 export const CategoryFilter: React.FC<CategoryFilterProps> = ({
   categories,
@@ -36,7 +36,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
                 alt=""
                 width={20}
                 height={20}
-                className="w-4 h-4 md:w-5 md:h-5"
+                className="h-4 w-4 md:h-5 md:w-5"
                 aria-hidden="true"
               />
               <span className="text-xs md:text-sm lg:text-base">{category}</span>
@@ -50,7 +50,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
         aria-label="View all categories"
       >
         See more Categories
-        <ChevronRight className="w-5 h-5" aria-hidden="true" />
+        <ChevronRight className="h-5 w-5" aria-hidden="true" />
       </button>
     </div>
   );

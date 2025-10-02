@@ -1,20 +1,20 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
-import { useState } from "react";
-import { navbarVariants, navItems, NAVBAR_STYLES } from "@/lib/constants/navbar";
-import { NavLinks } from "@/components/navbar/NavLinks";
-import { AuthSection } from "@/components/navbar/AuthSection";
-import { MobileMenu } from "@/components/navbar/MobileMenu";
+'use client';
+import { motion } from 'framer-motion';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { AuthSection } from '@/components/navbar/AuthSection';
+import { MobileMenu } from '@/components/navbar/MobileMenu';
+import { NavLinks } from '@/components/navbar/NavLinks';
+import { Button } from '@/components/ui/button';
+import { NAVBAR_STYLES, navbarVariants, navItems } from '@/lib/constants/navbar';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    setIsMobileMenuOpen((prev) => !prev);
+    setIsMobileMenuOpen(prev => !prev);
   };
 
   const handleMenuClose = () => {
@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 supports-[backdrop-filter]:bg-background/60"
+        className="bg-background/95 border-border/50 supports-[backdrop-filter]:bg-background/60 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md"
         initial={false}
         variants={navbarVariants}
       >

@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import { FeatureItem } from "./FeatureItem";
-import { featureContainerVariants } from "@/lib/constants/features";
-import { MASTERCLASS_STYLES } from "@/lib/constants/masterclass";
-import type { FeatureAccordionProps } from "@/lib/types/feature";
+import type { FeatureAccordionProps } from '@/lib/types/feature';
+import { motion } from 'framer-motion';
+import { featureContainerVariants } from '@/lib/constants/features';
+import { MASTERCLASS_STYLES } from '@/lib/constants/masterclass';
+import { FeatureItem } from './FeatureItem';
 
 export const FeatureAccordion: React.FC<FeatureAccordionProps> = ({
   features,
@@ -14,7 +14,7 @@ export const FeatureAccordion: React.FC<FeatureAccordionProps> = ({
       className={MASTERCLASS_STYLES.accordion.wrapper}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: '-100px' }}
       variants={featureContainerVariants}
       role="region"
       aria-label="Masterclass features"

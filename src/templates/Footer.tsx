@@ -1,13 +1,13 @@
-"use client"
-import { NewsletterForm } from "@/components/footer/NewsletterForm";
-import { FooterLogo } from "@/components/footer/FooterLogo";
-import { FooterNavigation } from "@/components/footer/FooterNavigation";
-import { FooterCopyright } from "@/components/footer/FooterCopyright";
-import { FOOTER_LINKS, FOOTER_STYLES, FOOTER_CONTENT } from "@/lib/constants/footer";
+'use client';
+import { FooterCopyright } from '@/components/footer/FooterCopyright';
+import { FooterLogo } from '@/components/footer/FooterLogo';
+import { FooterNavigation } from '@/components/footer/FooterNavigation';
+import { NewsletterForm } from '@/components/footer/NewsletterForm';
+import { FOOTER_CONTENT, FOOTER_LINKS, FOOTER_STYLES } from '@/lib/constants/footer';
 
 const Footer = () => {
-  const handleNewsletterSubmit = async (email: string) => {
-    console.log("Newsletter subscription:", email);
+  const handleNewsletterSubmit = async () => {
+    console.warn('Newsletter subscription not implemented');
   };
 
   return (

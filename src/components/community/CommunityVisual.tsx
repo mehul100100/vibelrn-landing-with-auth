@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { COMMUNITY_STYLES } from "@/lib/constants/community";
-import type { CommunityVisualProps } from "@/lib/types/community";
+import type { CommunityVisualProps } from '@/lib/types/community';
+import Image from 'next/image';
+import { COMMUNITY_STYLES } from '@/lib/constants/community';
 
 export const CommunityVisual: React.FC<CommunityVisualProps> = ({
   imageSrc,

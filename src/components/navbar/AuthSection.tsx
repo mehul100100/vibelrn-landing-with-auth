@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { ClerkLoading, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import Link from "next/link";
-import Image from "next/image";
-import { CLERK_CONFIG } from "@/lib/constants/navbar";
+import { ClerkLoading, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { CLERK_CONFIG } from '@/lib/constants/navbar';
 
 export const AuthSection: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const AuthSection: React.FC = () => {
       <Button
         variant="mentorOutline"
         size="default"
-        className="hidden lg:flex rounded-full"
+        className="hidden rounded-full lg:flex"
         asChild
       >
         <Link href="/become-mentor" aria-label="Become a mentor">
@@ -29,7 +29,7 @@ export const AuthSection: React.FC = () => {
       {/* Clerk Loading State */}
       <ClerkLoading>
         <div
-          className="w-10 h-10 rounded-full bg-gray-200 animate-pulse"
+          className="h-10 w-10 animate-pulse rounded-full bg-gray-200"
           aria-label="Loading authentication"
         />
       </ClerkLoading>

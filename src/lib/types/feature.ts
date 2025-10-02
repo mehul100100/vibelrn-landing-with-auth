@@ -1,27 +1,27 @@
-import { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-export interface Feature {
+export type Feature = {
   id: string;
   icon: ReactNode;
   title: string;
   description: string;
-}
+};
 
-export interface FeatureItemProps {
+export type FeatureItemProps = {
   feature: Feature;
   index: number;
   isExpanded: boolean;
   onToggle: () => void;
-}
+};
 
-export interface MasterclassHeaderProps {
+export type MasterclassHeaderProps = {
   badge: string;
   heading: string;
   description: string;
-}
+};
 
-export interface FeatureAccordionProps {
+export type FeatureAccordionProps = {
   features: Feature[];
   expandedIndex: number;
   onToggle: (index: number) => void;
-}
+};

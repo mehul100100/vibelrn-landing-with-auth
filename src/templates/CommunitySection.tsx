@@ -1,7 +1,7 @@
-import { CommunityContent } from "@/components/community/CommunityContent";
-import { CommunityVisual } from "@/components/community/CommunityVisual";
-import { COMMUNITY_STYLES, COMMUNITY_CONTENT } from "@/lib/constants/community";
-import type { CommunitySectionProps } from "@/lib/types/community";
+import type { CommunitySectionProps } from '@/lib/types/community';
+import { CommunityContent } from '@/components/community/CommunityContent';
+import { CommunityVisual } from '@/components/community/CommunityVisual';
+import { COMMUNITY_CONTENT, COMMUNITY_STYLES } from '@/lib/constants/community';
 
 const CommunitySection: React.FC<CommunitySectionProps> = ({
   badge = COMMUNITY_CONTENT.badge,

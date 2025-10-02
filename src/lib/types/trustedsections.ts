@@ -1,4 +1,4 @@
-export interface TrustedSectionLogo {
-    name: string;
-    url: string;
-}
+export type TrustedSectionLogo = {
+  name: string;
+  url: string;
+};

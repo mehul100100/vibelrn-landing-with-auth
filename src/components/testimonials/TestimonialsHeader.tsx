@@ -1,5 +1,5 @@
-import { TESTIMONIALS_STYLES } from "@/lib/constants/testimonials";
-import type { TestimonialsHeaderProps } from "@/lib/types/testimonials";
+import type { TestimonialsHeaderProps } from '@/lib/types/testimonials';
+import { TESTIMONIALS_STYLES } from '@/lib/constants/testimonials';
 
 export const TestimonialsHeader: React.FC<TestimonialsHeaderProps> = ({
   badge,

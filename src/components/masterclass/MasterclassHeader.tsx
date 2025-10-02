@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { fadeUpVariants } from "@/lib/constants/features";
-import { MASTERCLASS_STYLES } from "@/lib/constants/masterclass";
-import type { MasterclassHeaderProps } from "@/lib/types/feature";
+import type { MasterclassHeaderProps } from '@/lib/types/feature';
+import { motion } from 'framer-motion';
+import { fadeUpVariants } from '@/lib/constants/features';
+import { MASTERCLASS_STYLES } from '@/lib/constants/masterclass';
 
 export const MasterclassHeader: React.FC<MasterclassHeaderProps> = ({
   badge,

@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { TESTIMONIALS_STYLES } from "@/lib/constants/testimonials";
-import type { TestimonialCardProps } from "@/lib/types/testimonials";
+import type { TestimonialCardProps } from '@/lib/types/testimonials';
+import Image from 'next/image';
+import { TESTIMONIALS_STYLES } from '@/lib/constants/testimonials';
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   testimonial,
@@ -15,7 +15,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <Image
           src={testimonial.image}
           alt={`Testimonial from ${testimonial.name}, ${testimonial.role}${
-            testimonial.company ? ` at ${testimonial.company}` : ""
+            testimonial.company ? ` at ${testimonial.company}` : ''
           }: "${testimonial.quote}"`}
           width={400}
           height={300}
@@ -24,7 +24,12 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
           priority={priority}
         />
         <span className="sr-only">
-          {testimonial.quote} - {testimonial.name}, {testimonial.role}
+          {testimonial.quote}
+          {' '}
+          -
+          {testimonial.name}
+          ,
+          {testimonial.role}
           {testimonial.company && ` at ${testimonial.company}`}
         </span>
       </blockquote>

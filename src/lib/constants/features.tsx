@@ -1,6 +1,6 @@
-import { Pen, Star, Zap, Target, Flag } from "lucide-react";
-import type { Feature } from "../types/feature";
-import type { Variants } from "framer-motion";
+import type { Variants } from 'framer-motion';
+import type { Feature } from '../types/feature';
+import { Flag, Pen, Star, Target, Zap } from 'lucide-react';
 
 export const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -63,38 +63,38 @@ export const imageVariants: Variants = {
 
 export const features: Feature[] = [
   {
-    id: "feature-real-use-cases",
-    icon: <Pen className="w-5 h-5 text-gray-700" aria-hidden="true" />,
-    title: "Real use cases tailored for business & creative work",
+    id: 'feature-real-use-cases',
+    icon: <Pen className="h-5 w-5 text-gray-700" aria-hidden="true" />,
+    title: 'Real use cases tailored for business & creative work',
     description:
-      "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
+      'Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.',
   },
   {
-    id: "feature-step-by-step",
-    icon: <Star className="w-5 h-5 text-gray-700" aria-hidden="true" />,
-    title: "Step-by-step lessons anyone can follow",
+    id: 'feature-step-by-step',
+    icon: <Star className="h-5 w-5 text-gray-700" aria-hidden="true" />,
+    title: 'Step-by-step lessons anyone can follow',
     description:
-      "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
+      'Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.',
   },
   {
-    id: "feature-bite-sized",
-    icon: <Zap className="w-5 h-5 text-gray-700" aria-hidden="true" />,
-    title: "Bite-sized videos that fit your schedule",
+    id: 'feature-bite-sized',
+    icon: <Zap className="h-5 w-5 text-gray-700" aria-hidden="true" />,
+    title: 'Bite-sized videos that fit your schedule',
     description:
-      "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
+      'Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.',
   },
   {
-    id: "feature-curated-tools",
-    icon: <Target className="w-5 h-5 text-gray-700" aria-hidden="true" />,
-    title: "Curated tools to boost daily productivity",
+    id: 'feature-curated-tools',
+    icon: <Target className="h-5 w-5 text-gray-700" aria-hidden="true" />,
+    title: 'Curated tools to boost daily productivity',
     description:
-      "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
+      'Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.',
   },
   {
-    id: "feature-learn-by-doing",
-    icon: <Flag className="w-5 h-5 text-gray-700" aria-hidden="true" />,
-    title: "Learn by doing, not by reading manuals",
+    id: 'feature-learn-by-doing',
+    icon: <Flag className="h-5 w-5 text-gray-700" aria-hidden="true" />,
+    title: 'Learn by doing, not by reading manuals',
     description:
-      "Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.",
+      'Learn how AI can work for you. Whether managing a business, building a brand, or working on projects, we show real ways to apply AI for immediate value.',
   },
 ];

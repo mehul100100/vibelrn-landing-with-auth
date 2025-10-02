@@ -1,5 +1,5 @@
-import { MENTOR_STYLES } from "@/lib/constants/mentor";
-import type { MentorHeaderProps } from "@/lib/types/mentor";
+import type { MentorHeaderProps } from '@/lib/types/mentor';
+import { MENTOR_STYLES } from '@/lib/constants/mentor';
 
 export const MentorHeader: React.FC<MentorHeaderProps> = ({
   badge,

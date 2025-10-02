@@ -1,8 +1,8 @@
-"use client";
-import { useState } from "react";
-import { TestimonialCard } from "./TestimonialCard";
-import { TESTIMONIALS_STYLES } from "@/lib/constants/testimonials";
-import type { TestimonialMarqueeProps } from "@/lib/types/testimonials";
+'use client';
+import type { TestimonialMarqueeProps } from '@/lib/types/testimonials';
+import { useState } from 'react';
+import { TESTIMONIALS_STYLES } from '@/lib/constants/testimonials';
+import { TestimonialCard } from './TestimonialCard';
 
 export const TestimonialMarquee: React.FC<TestimonialMarqueeProps> = ({
   testimonials,
@@ -18,7 +18,7 @@ export const TestimonialMarquee: React.FC<TestimonialMarqueeProps> = ({
     >
       <div
         className={`${TESTIMONIALS_STYLES.marquee.container} ${
-          isPaused ? TESTIMONIALS_STYLES.marquee.paused : ""
+          isPaused ? TESTIMONIALS_STYLES.marquee.paused : ''
         }`}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -33,7 +33,7 @@ export const TestimonialMarquee: React.FC<TestimonialMarqueeProps> = ({
           />
         ))}
 
-        {testimonials.map((testimonial) => (
+        {testimonials.map(testimonial => (
           <TestimonialCard
             key={`${testimonial.id}-duplicate`}
             testimonial={testimonial}

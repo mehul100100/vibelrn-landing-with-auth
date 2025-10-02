@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { FOOTER_STYLES } from "@/lib/constants/footer";
-import type { FooterNavigationProps } from "@/lib/types/footer";
+import type { FooterNavigationProps } from '@/lib/types/footer';
+import Link from 'next/link';
+import { FOOTER_STYLES } from '@/lib/constants/footer';
 
 export const FooterNavigation: React.FC<FooterNavigationProps> = ({ links }) => {
   return (
@@ -14,8 +14,8 @@ export const FooterNavigation: React.FC<FooterNavigationProps> = ({ links }) => 
           href={link.href}
           className={FOOTER_STYLES.navigation.link}
           {...(link.external && {
-            target: "_blank",
-            rel: "noopener noreferrer",
+            target: '_blank',
+            rel: 'noopener noreferrer',
           })}
         >
           {link.label}

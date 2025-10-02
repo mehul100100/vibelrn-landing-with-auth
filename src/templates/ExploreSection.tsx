@@ -1,13 +1,13 @@
-"use client";
-import { useState, useMemo } from "react";
-import { CategoryFilter } from "@/components/explore/CategoryFilter";
-import { CourseGrid } from "@/components/explore/CourseGrid";
+'use client';
+import type { ExploreSectionProps } from '@/lib/types/explore';
+import { useMemo, useState } from 'react';
+import { CategoryFilter } from '@/components/explore/CategoryFilter';
+import { CourseGrid } from '@/components/explore/CourseGrid';
 import {
-  EXPLORE_STYLES,
   DEFAULT_CATEGORIES,
+  EXPLORE_STYLES,
   SAMPLE_COURSES,
-} from "@/lib/constants/explore";
-import type { ExploreSectionProps } from "@/lib/types/explore";
+} from '@/lib/constants/explore';
 
 const ExploreSection: React.FC<ExploreSectionProps> = ({
   title,
@@ -19,10 +19,12 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({
 
   // Filter courses based on active category
   const filteredCourses = useMemo(() => {
-    if (activeCategory === 0) return courses; // "All" category
-    
+    if (activeCategory === 0) {
+      return courses;
+    } // "All" category
+
     const selectedCategory = categories[activeCategory];
-    return courses.filter((course) => course.category === selectedCategory);
+    return courses.filter(course => course.category === selectedCategory);
   }, [activeCategory, courses, categories]);
 
   const handleCategoryChange = (index: number) => {
@@ -37,7 +39,9 @@ const ExploreSection: React.FC<ExploreSectionProps> = ({
       <div className={EXPLORE_STYLES.container}>
         <header className={EXPLORE_STYLES.header}>
           <h2 id="explore-section-heading" className={EXPLORE_STYLES.heading}>
-            {title} <span className="font-bold">{boldTitle}</span>
+            {title}
+            {' '}
+            <span className="font-bold">{boldTitle}</span>
           </h2>
         </header>
         <CategoryFilter

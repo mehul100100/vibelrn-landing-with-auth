@@ -1,12 +1,12 @@
-import Navbar from "@/templates/Navbar";
-import HeroSection from "@/templates/HeroSection";
-import TrustedSection from "@/templates/TrustedSection";
-import ExploreSection from "@/templates/ExploreSection";
-import MasterclassSection from "@/templates/MasterclassSection";
-import CommunitySection from "@/templates/CommunitySection";
-import TestimonialsSection from "@/templates/TestimonialsSection";
-import MentorSection from "@/templates/MentorSection";
-import Footer from "@/templates/Footer";
+import CommunitySection from '@/templates/CommunitySection';
+import ExploreSection from '@/templates/ExploreSection';
+import Footer from '@/templates/Footer';
+import HeroSection from '@/templates/HeroSection';
+import MasterclassSection from '@/templates/MasterclassSection';
+import MentorSection from '@/templates/MentorSection';
+import Navbar from '@/templates/Navbar';
+import TestimonialsSection from '@/templates/TestimonialsSection';
+import TrustedSection from '@/templates/TrustedSection';
 
 const Index = () => {
   return (

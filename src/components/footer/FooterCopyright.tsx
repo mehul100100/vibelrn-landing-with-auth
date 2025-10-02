@@ -1,5 +1,5 @@
-import { FOOTER_STYLES } from "@/lib/constants/footer";
-import type { FooterCopyrightProps } from "@/lib/types/footer";
+import type { FooterCopyrightProps } from '@/lib/types/footer';
+import { FOOTER_STYLES } from '@/lib/constants/footer';
 
 export const FooterCopyright: React.FC<FooterCopyrightProps> = ({
   companyName,
@@ -8,7 +8,13 @@ export const FooterCopyright: React.FC<FooterCopyrightProps> = ({
   return (
     <div className={FOOTER_STYLES.copyright.wrapper}>
       <p className={FOOTER_STYLES.copyright.text}>
-        © {year} {companyName} All rights reserved.
+        ©
+        {' '}
+        {year}
+        {' '}
+        {companyName}
+        {' '}
+        All rights reserved.
       </p>
     </div>
   );

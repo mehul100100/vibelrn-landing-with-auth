@@ -1,15 +1,15 @@
-"use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { MasterclassHeader } from "@/components/masterclass/MasterclassHeader";
-import { FeatureAccordion } from "@/components/masterclass/FeatureAccordion";
+'use client';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useState } from 'react';
+import { FeatureAccordion } from '@/components/masterclass/FeatureAccordion';
+import { MasterclassHeader } from '@/components/masterclass/MasterclassHeader';
 import {
-  features,
   containerVariants,
+  features,
   imageVariants,
-} from "@/lib/constants/features";
-import { MASTERCLASS_STYLES, MASTERCLASS_CONTENT } from "@/lib/constants/masterclass";
+} from '@/lib/constants/features';
+import { MASTERCLASS_CONTENT, MASTERCLASS_STYLES } from '@/lib/constants/masterclass';
 
 const MasterclassSection: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
@@ -27,7 +27,7 @@ const MasterclassSection: React.FC = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
         >
           <MasterclassHeader
@@ -48,7 +48,7 @@ const MasterclassSection: React.FC = () => {
             className={MASTERCLASS_STYLES.image.wrapper}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: '-100px' }}
             variants={imageVariants}
           >
             <Image
@@ -57,7 +57,7 @@ const MasterclassSection: React.FC = () => {
               width={600}
               height={800}
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="w-full h-auto object-contain"
+              className="h-auto w-full object-contain"
               priority={false}
             />
           </motion.div>

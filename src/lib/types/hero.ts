@@ -1,18 +1,18 @@
-import { Variants } from "framer-motion";
+import type { Variants } from 'framer-motion';
 
-export interface HeroHeadingProps {
+export type HeroHeadingProps = {
   title: string;
   highlightedWord: string;
   description: string;
-}
+};
 
-export interface HeroSearchBarProps {
+export type HeroSearchBarProps = {
   placeholder?: string;
-}
+};
 
-export interface ToolsCountProps {
+export type ToolsCountProps = {
   count: number;
-}
+};
 
 export type HeroVariants = {
   container: Variants;

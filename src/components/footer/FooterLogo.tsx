@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FOOTER_STYLES } from "@/lib/constants/footer";
-import type { FooterLogoProps } from "@/lib/types/footer";
+import type { FooterLogoProps } from '@/lib/types/footer';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FOOTER_STYLES } from '@/lib/constants/footer';
 
 export const FooterLogo: React.FC<FooterLogoProps> = ({
   src,
