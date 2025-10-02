@@ -13,7 +13,7 @@ export const TESTIMONIALS_STYLES = {
     },
     marquee: {
       wrapper: "relative overflow-hidden",
-      container: "flex testimonial-marquee",
+      container: "flex animate-marquee",
       paused: "paused",
     },
     card: {
