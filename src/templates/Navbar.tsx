@@ -35,10 +35,9 @@ const Navbar: React.FC = () => {
                 <Image
                   src="/silicon_academy_logo.svg"
                   alt="Silicon Academy Logo"
-                  width={35}
-                  height={35}
+                  width={90}
+                  height={90}
                   priority
-                  className="w-auto"
                 />
               </div>
             </Link>
