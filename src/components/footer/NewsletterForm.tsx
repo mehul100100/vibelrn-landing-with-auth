@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FOOTER_STYLES, FOOTER_CONTENT } from "@/lib/constants/footer";
 import type { NewsletterFormProps } from "@/lib/types/footer";
-const hello = false
 
 export const NewsletterForm: React.FC<NewsletterFormProps> = () => {
     return (
