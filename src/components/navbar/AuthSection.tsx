@@ -28,10 +28,18 @@ export const AuthSection: React.FC = () => {
 
       {/* Clerk Loading State */}
       <ClerkLoading>
-        <div
+        <Button
+          variant="dark"
+          size="default"
+          className="rounded-full px-6"
+          asChild
+        >
+          <Link href="/sign-up">Sign up</Link>
+        </Button>
+        {/* <div
           className="h-10 w-[101.69px] animate-pulse rounded-full bg-gray-200"
           aria-label="Loading authentication"
-        />
+        /> */}
       </ClerkLoading>
 
       {/* Signed Out State */}

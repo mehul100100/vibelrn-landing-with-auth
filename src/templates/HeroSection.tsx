@@ -1,10 +1,10 @@
 'use client';
-import { motion } from 'framer-motion';
+
 import { HeroHeading } from '@/components/hero/HeroHeading';
 import { HeroSearchBar } from '@/components/hero/HeroSearchBar';
 import { ToolsCount } from '@/components/hero/ToolsCount';
 import ToolMarquee from '@/components/ToolMarquee';
-import { HERO_ANIMATIONS, HERO_CONTENT, HERO_STYLES } from '@/lib/constants/hero';
+import { HERO_CONTENT, HERO_STYLES } from '@/lib/constants/hero';
 
 const HeroSection: React.FC = () => {
   return (
@@ -12,12 +12,7 @@ const HeroSection: React.FC = () => {
       className={`${HERO_STYLES.container} ${HERO_STYLES.gradient}`}
       aria-labelledby="hero-heading"
     >
-      <motion.div
-        className={HERO_STYLES.content}
-        variants={HERO_ANIMATIONS.container}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className={HERO_STYLES.content}>
         <HeroHeading
           title="Master AI Tools In"
           highlightedWord="Minutes"
@@ -28,7 +23,7 @@ const HeroSection: React.FC = () => {
           placeholder={HERO_CONTENT.defaultPlaceholder}
         />
         <ToolMarquee />
-      </motion.div>
+      </div>
     </section>
   );
 };
